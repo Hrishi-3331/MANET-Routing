@@ -7,6 +7,7 @@ class Soldier:
         self.id_number = id_number
         self.power = power
         self.signal_strength = signal_strength
+        self.cluster_id = None
 
     def get_longitude(self):
         return self.longitude
@@ -22,3 +23,9 @@ class Soldier:
 
     def get_signal_strength(self):
         return self.signal_strength
+
+    def set_cluster_id(self, id):
+        self.cluster_id = id
+
+    def get_cluster_id(self):
+        return self.cluster_id
