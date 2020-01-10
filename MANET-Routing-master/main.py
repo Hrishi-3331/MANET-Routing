@@ -37,7 +37,8 @@ for point in cluster_points:
             available_soldier_list.remove(soldier)
 
 for stack in WarField.get_clusters():
-    stack.get_coordinates()
+    stack.print_cluster()
+
 features = []
 i = 0
 for soldier in soldier_list:
@@ -51,6 +52,8 @@ for soldier in soldier_list:
             ]
         },
         "properties": {
+            'description':
+                '<strong>ID no. :</strong> ' + str(soldier.get_id()),
             "title": 'Soldier' + str(i),
             "icon": "monument"
         }
