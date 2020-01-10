@@ -17,10 +17,13 @@ cluster_points = []
 for p in range(0, int(math.sqrt(N))):
     cluster_points.append(Cluster.generate_cluster_center())
 
-
-
-
-//
+for point in cluster_points:
+    lat1 = point[0]
+    lon1 = point[1]
+    [x1, y1] = Calculations.get_world_coordinates(lat1, lon1)
+    for soldier in soldier_list:
+        [x2, y2] = Calculations.get_world_coordinates(soldier.get_latitude(), soldier.get_longitude())
+        dist = Calculations.get_distance(x1, y1, x2, y2)
 
 features = []
 i = 0
